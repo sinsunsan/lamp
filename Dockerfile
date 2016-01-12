@@ -32,7 +32,7 @@ RUN a2enmod rewrite
 # Add custom virtual hosts SL MOSAIC
 ADD mosaic.conf /etc/apache2/sites-available/mosaic.conf
 RUN a2ensite mosaic
-RUN mkdir -p /var/www/html/mosaic/web
+RUN mkdir -p /var/www/html/mosaic/app/web
 RUN service apache2 restart
 
 # Configure /app folder with sample app
